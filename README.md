@@ -66,6 +66,7 @@ asset 폴더에는 이미지와 같은 것들이 들어가며, ui에 있어서 �
 
 .vue 파일은 vue.js에서 제공되는 custom file type으로, html-like syntax를 가진 ui portion format 제작에 이용된다.
 .vue 파일은 세 가지 타입의 top-level language blocks가 존재하는데, 그 세가지는 아래와 같다.
+
 1. <template></template>
 2. <script></script>
 3. <style></style>
@@ -81,6 +82,8 @@ Components
 
 ---------------------------------------------------
 Script
+
 ![image](https://user-images.githubusercontent.com/80696846/134664408-dccb709b-d5fe-41e6-8571-362b5156f3c4.png)
+
 위 이미지에서는 data()라는 함수를 선언해주었다. 스크립트 내에는 이와 같이 template에 보내줄 로직, 데이터 등을 작성할 수 있다.
 
