@@ -41,7 +41,7 @@ default는 http://localhost:8080/이 된다.
 
 -------------------------------------------------
 
-###2. Project Structure
+## 2. Project Structure
 타 Stacks에서와 같이, 프로젝트를 create하고 나면 package.json파일에서 dependencies를 확인할 수 있다.
 
 yarn.lock 파일은 dependency를 버전에 맞춰 설치하는데에 목적이 있으므로, 개발 과정에 있어 필요하지 않으면 그대로 두게 될 것이다.
