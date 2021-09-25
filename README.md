@@ -1,3 +1,5 @@
+본 스터디는 Code volution의 Vue JS 3 Tutorial을 참고하였으며, 프론트엔드 공부에 목적을 둔다.
+
 ## 1. 개발 환경 설치
 
 vue.js의 프로젝트 환경을 만드는 방법은 크게 4가지가 있으나, 이번 공부에서는 vue/cli를 이용하기로 한다.
@@ -76,14 +78,37 @@ script block은 js와 같은 로직, 데이터를 maintain하는데에 목적이
 style block은 ui 디자인을 markup하는 부분으로, 전체적인 디자인을 담당한다.
 
 -----------------------------------------------------
-Components
+# Components
 컴포넌트는 기본 html elements를 확장하고, 재사용화하게 하기위해 캡슐화 하는데에 목적이 있다.
 그러나 지금은 초기 단계이므로, SFC인 .vue file에 집중하기로 하고 언급만 하고 넘어가기로 한다.
 
 ---------------------------------------------------
-Script
+# Script
 
 ![image](https://user-images.githubusercontent.com/80696846/134664408-dccb709b-d5fe-41e6-8571-362b5156f3c4.png)
 
 위 이미지에서는 data()라는 함수를 선언해주었다. 스크립트 내에는 이와 같이 template에 보내줄 로직, 데이터 등을 작성할 수 있다.
 
+# Binding Text
+
+![image](https://user-images.githubusercontent.com/80696846/134759370-d01f5b9c-4c24-4fb5-ac30-79bac7e1491b.png)
+
+스크립트 내에 위와 같이 객체가 선언되었다고 하자. 그러면 이 객체의 이름은 name이고, 그 content는 Vishwas가 될 것이다.
+이를 template 내부 이중 중괄호 {{}} 안에 넣어주게 되면, {{name}}에서 Vishwas가 hello 다음에 출력됨을 확인할 수 있다.
+
+![image](https://user-images.githubusercontent.com/80696846/134759409-d8597e71-10be-4058-bdff-a5b0f0385fac.png)
+
+이의 강력한 점은, 이는 정적인 것이 아니라 name 속성이 변경될 때마다 update 된다는 점이다.
+이제 또다른 binding 방법인 v-text에 대해서 살펴보도록 하자.
+
+![image](https://user-images.githubusercontent.com/80696846/134759596-553a6d9e-285d-4f25-8200-a0772eb8cf8c.png)
+
+여기서 v-text는 브라우저에 sortinghyeok으로 출력된다. 그러나 v-text의 단점은 다음과 같다.
+
+![image](https://user-images.githubusercontent.com/80696846/134759625-7997c592-c9a9-403e-b86a-c60fcfc9ad55.png)
+
+바로 이전의 코드에서 <div>태그 사이에 텍스트를 입력했을 뿐이지만, v-text는 블록내부의 전부를 태그 내부의 콘텐츠로 덮으려고 시도하기에 이에 충돌이 일어나게 된다. 따라서 v-text는 동적인 바인딩에 제약이 있다는 단점이 있다.
+또한, 이중 중괄호 문법은 v-text에 비하여 처리속도가 약간 더 빠르다는 이점이 존재한다.
+
+  ---------------------------------
+# Binding Html
